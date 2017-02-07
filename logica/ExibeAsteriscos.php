@@ -2,11 +2,11 @@
 
 // Exercicio 3
 
-for($i = 1; $1 <= 100; $i++) {
-  if ($i % 2){
-    echo "*" . PHP_EOL;
+for($i = 1; $i <= 100; $i++) {
+  if ($i % 2 == 1){
+    echo "$i - *<br/>";
   } else {
-    echo "**" . PHP_EOL;
+    echo "$i - **<br/>";
   }
 }
 
