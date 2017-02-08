@@ -1,5 +1,9 @@
 <?php
 
+  // Para nao precisar criar o Cliente novamente
+  require_once('Cliente.php');
+  //spl_autoload_register();
+
   class Conta {
     public $numero;
     public $saldo;
@@ -17,18 +21,16 @@
   echo "Saldo: $conta->saldo <br>";
   echo "Limite: $conta->limite <br>";
 
-  class Cliente {
-    public $nome;
-  }
-
   $cliente1 = new Cliente;
   $cliente1->nome = "Joao das Neves";
+  $cliente1->codigo = "987";
 
   var_dump($conta->dono); // numfmt_get_locale
 
   $conta->dono = $cliente1;
 
   echo "Nome do Dono: {$conta->dono->nome} <br>";
+  echo "Código do Dono: {$conta->dono->codigo} <br>";
 
   class Agencia {
     public $numero;
