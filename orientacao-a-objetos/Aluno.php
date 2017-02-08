@@ -4,6 +4,7 @@
     public $nome;
     public $rg;
     public $dataNascimento;
+    public $turma;
   }
 
   $aluno1 = new Aluno;
@@ -23,5 +24,25 @@
   echo "Nome do aluno: $aluno2->nome <br>";
   echo "RG: $aluno2->rg <br>";
   echo "Data de Nascimento: $aluno2->dataNascimento <br><br>";
+
+  class Turma {
+    public $periodo;
+    public $serie;
+    public $sigla;
+    public $tipoDeEnsino;
+  }
+
+  $turma1 = new Turma;
+  $turma1->periodo = "Tarde";
+  $turma1->serie = "9";
+  $turma1->sigla = "C";
+  $turma1->tipoDeEnsino = "Superior";
+
+  $aluno1->turma = $turma1;
+
+  echo "Periodo da turma: {$aluno1->turma->periodo} <br>";
+  echo "Serie: {$aluno1->turma->serie} <br>";
+  echo "Sigla: {$aluno1->turma->sigla}<br>";
+  echo "Ensino: {$aluno1->turma->tipoDeEnsino} <br><br>";
 
  ?>
