@@ -5,8 +5,9 @@
   class Gerente extends Funcionario{
     public $senha;
 
+    // override
     public function calculaBonificacao(){
-      return $this->salario * 0.6 + 100;
+      return parent::calculaBonus() + 2 * this-> salario;
     }
   }
 
